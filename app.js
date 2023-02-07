@@ -11,7 +11,7 @@ const btnCalculate = document.getElementById('calculate')
 
 btnCalculate.addEventListener('click', calculate)
 
-note2.addEventListener('keydown', necessaryNote)
+note2.addEventListener('keyup', necessaryNote)
 
 
 
@@ -32,10 +32,12 @@ function necessaryNote(){
     let firstNote = (note1.value)*0.3
     let secondNote = (note2.value)*0.3 
 
-    let pass = 0
+   
     let honor = 0
 
     let recovery = (2.1 - (firstNote+secondNote))
+    let pass = (3.5 - (firstNote+secondNote))
 
     recuperation.textContent = "necesita " + recovery/0.4 + " para recuperar"
+    necessary.textContent = "necesita "+ pass/0.4 + " para pasar"
 }
