@@ -32,12 +32,12 @@ function necessaryNote(){
     let firstNote = (note1.value)*0.3
     let secondNote = (note2.value)*0.3 
 
-   
-    let honor = 0
-
+    
     let recovery = (2.1 - (firstNote+secondNote))
     let pass = (3.5 - (firstNote+secondNote))
+    let honor = (4.6 - (firstNote+secondNote))
 
     recuperation.textContent = "necesita " + recovery/0.4 + " para recuperar"
     necessary.textContent = "necesita "+ pass/0.4 + " para pasar"
+    honors.textContent = "necesita "+ honor/0.4 + " para pasar con honores"
 }
