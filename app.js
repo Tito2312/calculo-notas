@@ -21,10 +21,14 @@ function calculate() {
     let secondNote = (note2.value)*0.3 
     let thirdNote = (note3.value)*0.4
 
+    if (note1.value) {
+        
+    }
+
     let final = (firstNote+secondNote+thirdNote)
 
-    finalNote.textContent = final
-}
+    finalNote.textContent = final.toFixed(2)
+    }
 
 
 function necessaryNote(){
@@ -37,7 +41,7 @@ function necessaryNote(){
     let pass = (3.5 - (firstNote+secondNote))
     let honor = (4.6 - (firstNote+secondNote))
 
-    recuperation.textContent = "necesita " + recovery/0.4 + " para recuperar"
-    necessary.textContent = "necesita "+ pass/0.4 + " para pasar"
-    honors.textContent = "necesita "+ honor/0.4 + " para pasar con honores"
+    recuperation.textContent = "necesita " + (recovery/0.4).toFixed(2) + " para recuperar"
+    necessary.textContent = "necesita "+ (pass/0.4).toFixed(2) + " para pasar"
+    honors.textContent = "necesita "+ (honor/0.4).toFixed(2) + " para pasar con honores"
 }
